@@ -1,0 +1,122 @@
+body{
+  font-family: Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:#e0aaff;
+}
+
+.main{
+  height:500px;
+  width:500px;
+  background:white;
+  border-radius:10px;
+  
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.main:hover{
+    box-shadow:0px 40px 60px rgba(0,0,0,0.3);
+}
+
+#time_head{
+    font-size: 50px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.circle-wrapper{
+  position:relative;
+  width:250px;
+  height:250px;
+}
+
+.timer-circle{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:#51c7fa;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.outer-circle{
+  position:absolute;
+  border-radius:50%;
+  border:6px solid rgb(239, 18, 18);
+  box-shadow:0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.outer1{
+  width:200px;
+  height:200px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  border:14px solid rgb(213, 208, 208);
+}
+
+.outer2{
+  width:240px;
+  height:240px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  border:16px solid rgb(213, 208, 208);
+}
+
+.buttons{
+  margin-top:40px;
+}
+
+button{
+  padding:10px 20px;
+  margin:5px;
+  font-size:16px;
+  font-weight: bolder;
+  cursor:pointer;
+  border: solid 2px;
+  border-radius:50px;
+  border-color: black;
+  background: white;
+  color:black;
+}
+
+button:hover{
+    background: #728FCE;
+    box-shadow:0px 0px 30px rgb(38, 240, 3);
+}
+
+.outer1.active{
+  animation: darkRotate 3s infinite alternate;
+}
+
+.outer2.active{
+  animation: lightRotate 3s infinite alternate;
+}
+
+@keyframes darkRotate{
+  0%{ border-color:#4b0082; }
+  25%{ border-color:#5a189a; }
+  50%{ border-color:#3c096c; }
+  75%{ border-color:#240046; }
+  100%{ border-color:#7b2cbf; }
+}
+
+@keyframes lightRotate{
+  0%{ border-color:#e0aaff; }
+  25%{ border-color:#cdb4db; }
+  50%{ border-color:#ffc8dd; }
+  75%{ border-color:#ffafcc; }
+  100%{ border-color:#d8bbff; }
+}
